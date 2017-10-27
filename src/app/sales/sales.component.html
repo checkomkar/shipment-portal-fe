@@ -1,0 +1,111 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col s12 content-area">
+            <h5>7.5.2.SP-2: Shipment Portal List Screen</h5>
+            
+            <button class="btn btn-primary" uiSref="shipment-request">New Shipping Request</button>
+            
+            <div class="form-group">        
+                <input type="text" class="form-control" #term placeholder="Search Table" (keyup)="0">
+                <input type="text" name="name" value="" [(ngModel)]="name" />
+                {{name}}
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Ship Number</th>
+                        <th>
+                            Contract No.
+                        </th>
+                        <th>
+                            Customer
+                        </th>
+                        <th>
+                            Protocol
+                        </th>                
+                        <th>
+                            Site Number
+                        </th>
+                        <th>
+                            Request Date
+                        </th>
+                        <th>
+                            Requested Arrival Date
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor= "let item of ( items | searchFilter: term.value )">
+                        <td>
+                            {{item.ship_no}}
+                        </td>
+                        <td>
+                            {{item.contract_no}}
+                        </td>
+                        <td>
+                            {{item.customer}}
+                        </td>
+                        <td>
+                            PROT_1
+                        </td>
+                        <td>
+                            {{item.site_no}}
+                        </td>
+                        <td>
+                            {{item.request_date}}
+                        </td>
+                        <td>
+                            {{item.requested_arrival_date}}
+                        </td>
+                        <td>
+                            {{item.status}}
+                        </td>                
+                        <td>
+                            <button class="btn btn-default" (click)="openModal('custom-modal-1')">
+                                Create New Form
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <app-ang-datatables></app-ang-datatables>   -->
+        </div>
+    </div>
+</div>
+
+<modal id="custom-modal-1">
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" (click)="closeModal('custom-modal-1');" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+</modal>
+
+
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        This is a modal.
+    </div>
+</ng-template>
+
+<ng-template #newShipReq>
+    <app-new-ship-request [modalRefChild]='modalRef'></app-new-ship-request>    
+</ng-template>

@@ -1,0 +1,62 @@
+.login-bg {
+	background: url('../../assets/images/winter.jpg');
+	background-size: 100%;
+	min-height: 100%;
+	position: fixed;
+	width: 100%;
+	left: 0;
+}
+.login-container{
+	position: relative;
+    padding-top: 50px;
+	.sign-up{
+		color: white;
+		margin: 15px 0;
+		font-size: 16px;
+		a{
+			color: white;
+		}
+	}
+}
+
+.tag-line{
+    position: relative;
+    color: white;
+    margin: 0 auto 20px;
+    width: 65%;
+    line-height: 1.4;
+    //font-family: 'OpenSans-Regular', sans-sherif;
+
+    /* h3{
+	    width: 65%;
+    	margin: 0 auto;
+    } */
+}
+
+.login-box {
+    width: 50%;
+    background: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    //margin-top: 25%;
+    padding: 20px;
+    .login-fields-holder {
+    	width: 50%;
+    	margin: 0 auto;
+    	input.form-control {
+    		margin: 15px 0;    		
+    	}
+    }
+    .login-btn-holder {
+    	padding: 0px 0 15px;
+	    width: 50%;
+	    margin: 0 auto;
+    	.btn {
+    		width: 100%;
+    	}    	
+    	p {
+    		padding: 10px;
+    	}
+    }
+}

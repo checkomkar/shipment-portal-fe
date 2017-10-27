@@ -1,0 +1,17 @@
+@import '../../styles/common/variables';
+
+.nav-custom{
+	background: $catalent-main;
+	color: white;
+	a{
+		color: white;
+	}
+	//border-bottom: 1px solid #ddd;
+}
+.navbar-header{
+	a.navbar-brand{		
+		img{
+			width: 10%;
+		}		
+	}
+}

@@ -1,0 +1,57 @@
+nav.top-bar-nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: white;
+	z-index: 100;
+	.row{
+		background-color: white;
+	}
+	ul{
+		padding: 5px 15px 0;
+		li{
+			display: inline-block;
+			padding: 7px 10px;
+			color: white;
+		}
+	}
+}
+
+nav{
+	background-color: #0F6BAD;
+}
+
+.show-nav{
+    transform: translateX(0px);
+}
+
+.stylish-input-group{
+	border-radius: 50%;
+	margin-top: 8px;
+
+	.input-group-addon{
+		border-radius: 0px 15px 15px 0px;
+	}
+}
+.stylish-input-group .input-group-addon{
+    background: #EFF2F2 !important; 
+    border-color: #EFF2F2;
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#EFF2F2;
+	border-radius: 15px 0 0px 15px;
+	background-color: #EFF2F2;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+
+}
+
+.animated{
+	-webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+

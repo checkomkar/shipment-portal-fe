@@ -1,0 +1,117 @@
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import './plugins/material-form';
+@import './plugins/animate.min';
+*[hidden]{
+	display: none !important;
+}
+
+*[show]{
+	display: block;
+}
+
+@font-face {
+    font-family: OpenSans-Regular;
+    //src: url('./fonts/OpenSans-Regular.ttf');
+    src: url('./fonts/OpenSans.eot');
+	src: url('./fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/OpenSans.woff') format('woff'),
+		url('./fonts/OpenSans.ttf') format('truetype');
+}
+/* @font-face {
+	font-family: 'Open Sans';
+	src: url('OpenSans.eot');
+	src: url('OpenSans.eot?#iefix') format('embedded-opentype'),
+		url('OpenSans.woff') format('woff'),
+		url('OpenSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+} */
+
+
+body {
+	font-family: 'OpenSans-Regular', sans-sherif;
+}
+
+.custom-menu{
+	display: block;
+}
+
+.small-text{
+	font-size: 10px;
+}
+
+.main-section{
+	background-color: #EDF0F0;
+}
+
+.btn-catalent{
+	background-color: $catalent-main;
+	color: white;
+	&:hover{
+		color: white;
+		text-decoration: underline;
+	}
+	&.btn-catalent-light{
+		background-color: lighten( $catalent-main, 10% )
+	}
+	&.btn-purple-light{
+		background-color: lighten( $catalent-purple, 20% )
+	}
+}
+
+.no-pad{
+	padding: 0 !important;
+}
+
+.content-area{
+	background: #EDF0F0;
+}
+
+.badge {
+   position:relative;
+   &.badge-pink{   		
+		&:after{
+			background-color: #FF4774 !important;
+		}
+   }
+   &.badge-green{
+   		position: relative;
+		&:after{
+			background-color: #28CA70 !important;
+		}
+   }
+}
+.badge[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-10px;
+   right:-10px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;   
+}
+
+.modal{
+    .open{
+        z-index: 1003;
+        display: block;
+        opacity: 1;
+        transform: scaleX(1);
+        top: 10%;
+    }
+}
+
+.modal-overlay{
+    .show{
+        z-index: 1002;
+        display: block;
+        opacity: 0.5;
+    }
+}
+

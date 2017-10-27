@@ -1,0 +1,34 @@
+<nav class="sidebar">
+	<div class="profile text-center">
+		<div class="dp" style="background-image: url('http://www.iconsdb.com/icons/preview/gray/contacts-xxl.png')"></div>
+		<div class="user-details">
+			<p class="name">{{title}}</p>
+			<p class="role-play">Contextually Based</p>
+		</div>
+	</div>
+	<ul class="nav flex-column">
+		<!-- <li class="nav-item">
+			<a class="nav-link" href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+		</li> -->
+		<li class="nav-item">
+			<a class="nav-link" [routerLink]="['/']" routerLinkActive="active">
+				<span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span> Home
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" [routerLink]="['/new-shipment-request']" routerLinkActive="active">
+				<span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span> New Shipment Request
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" [routerLink]="['/select-lot']" routerLinkActive="active">
+				<span class="icon"><i class="fa fa-object-group" aria-hidden="true"></i></span> Select Lot
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" [routerLink]="['/find-site']" routerLinkActive="active">
+				<span class="icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span> Portal Find Site
+			</a>
+		</li>
+	</ul>
+</nav>
