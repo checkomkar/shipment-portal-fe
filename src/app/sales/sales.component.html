@@ -5,17 +5,19 @@
             
             <button class="btn btn-primary" uiSref="shipment-request">New Shipping Request</button>
             
-            <div class="form-group">        
+            <!--<div class="form-group">        
                 <input type="text" class="form-control" #term placeholder="Search Table" (keyup)="0">
                 <input type="text" name="name" value="" [(ngModel)]="name" />
                 {{name}}
-            </div>
-            <table class="table table-striped">
+            </div>-->
+            <div class="divider"></div>
+            <ng2-smart-table [settings]="settings" [source]="items"></ng2-smart-table>
+            <!--<table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Ship Number</th>
+                        <th>Consignment No.</th>
                         <th>
-                            Contract No.
+                            Quote
                         </th>
                         <th>
                             Customer
@@ -25,6 +27,9 @@
                         </th>                
                         <th>
                             Site Number
+                        </th>
+                        <th>
+                            Site Name
                         </th>
                         <th>
                             Request Date
@@ -41,7 +46,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor= "let item of ( items | searchFilter: term.value )">
+                    <tr *ngFor= "let item of  items">
                         <td>
                             {{item.ship_no}}
                         </td>
@@ -56,6 +61,9 @@
                         </td>
                         <td>
                             {{item.site_no}}
+                        </td>
+                        <td>
+                            SiteName
                         </td>
                         <td>
                             {{item.request_date}}
@@ -73,8 +81,9 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
             <!-- <app-ang-datatables></app-ang-datatables>   -->
+            
         </div>
     </div>
 </div>

@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule, TabsModule } from 'ngx-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 //import { BsDropdownModule } from 'ngx-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
@@ -39,6 +41,7 @@ import { routing } from './app.routing';
 //import { ModalDirective } from './directives/modal.directive';
 import { MaterializeModule } from 'ng2-materialize';
 import { DataTablesTestComponent } from './data-tables-test/data-tables-test.component';
+import { CreateFormBottonComponent } from './create-form-botton/create-form-botton.component';
 
 let loginState = { name: 'home', url: '/',  component: LoginComponent }; 
 let headersState = { name: 'headers', url: '/',  component: ShipRequestHeaderComponent }; 
@@ -103,8 +106,10 @@ const routes = {
     TopBarComponent,
     PageNotFoundComponent,
     DataTablesTestComponent,
+    CreateFormBottonComponent,
     //ModalDirective
-  ],
+    ],
+  entryComponents: [CreateFormBottonComponent],
   imports: [
       BrowserModule,
       FormsModule,
@@ -112,6 +117,8 @@ const routes = {
       ReactiveFormsModule,
       BrowserAnimationsModule,
       NgxDatatableModule,
+      NgxPaginationModule,
+      Ng2SmartTableModule,
     DataTablesModule,
     HttpModule,
     NgbModule.forRoot(),

@@ -6,7 +6,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { Subject } from 'rxjs/Rx';
 //import { ModalService } from '../services/modal.service';
-
+import { CreateFormBottonComponent } from '../create-form-botton/create-form-botton.component';
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
@@ -15,9 +15,10 @@ import { Subject } from 'rxjs/Rx';
 })
 export class SalesComponent implements OnInit {
     closeResult: string;
-    items: any;
+    items: any[];
     dtOptions: DataTables.Settings = {};
     name: any;
+    p: number = 1;
     //dtTrigger: Subject<any> = new Subject();
     dtTrigger: Subject<any> = new Subject();
     private dataUrl = './assets/sample-data.json';  // URL to web api
@@ -26,6 +27,38 @@ export class SalesComponent implements OnInit {
     testResponse: any;
     public modalRef: BsModalRef;
 
+    settings = {
+        actions: false,
+        
+        attr: {
+            class: 'striped custom-table-css responsive-table'
+        },
+        columns: {
+            
+            ship_no: {
+                title: 'Ship Number',
+                class: 'omkar',
+                editable: true,
+            },
+            contract_no: {
+                title: 'Contract No.'
+            },
+            customer: {
+                title: 'Customer'
+            },
+            site_no: {
+                title: 'Site Number',
+            },
+            status: {
+                title: 'Item Status'
+            },
+            button: {
+                title: '',
+                type: 'custom',
+                renderComponent: CreateFormBottonComponent,
+            }
+        }
+    };
     
   	
     constructor(private http: HttpService, private modalService: BsModalService) {

@@ -1,0 +1,112 @@
+﻿ng2-smart-table {
+    table{
+        &.custom-table-css{
+            thead{
+
+            }
+            tbody{
+                font-size: 16px;
+                tr{
+                    td{
+                        padding: 15px 15px;
+                    }                    
+                }
+            }
+        }
+        thead{
+            tr.ng2-smart-titles{
+                th.ng2-smart-th{
+                    padding: 15px 5px 0;
+                    display: table-cell;
+                    text-align: left;
+                    vertical-align: middle;
+                    border-radius: 2px;
+                    font-size: 1em;
+                    input.form-control {
+                        padding: 0 !important;
+                    }
+                    .ng2-smart-title{
+                        padding-left: 8px;
+                        a{
+                            color: black;
+                            &:hover{
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
+                    }
+                    
+                    ng2-smart-table-filter{
+                        input{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .ng2-smart-filter{
+            input{
+                padding: 0 !important;
+                font-size: 1em !important;
+                border-bottom: 1px solid #ddd !important;
+                //margin: 20em;
+            }
+            input-filter{
+                            
+            }
+                            
+        }
+    }
+
+    ng2-smart-table-pager{
+        nav{
+            background: transparent;
+            box-shadow: none;
+            text-align: center;
+            ul.pagination{
+
+                li.page-item{
+                    margin: 0 5px;
+                    &.active{
+                        background-color: transparent;
+                    }
+                    a{
+                        color: #444;
+                        display: inline-block;
+                        font-size: 1.2rem;
+                        padding: 0 10px;
+                        line-height: 30px;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                        &[aria-label="First"], &[aria-label="Last"]{
+                            font-size: 1.9em !important;
+                        }
+                        &.ng2-smart-page-link {
+                             &.page-link{
+                                 font-size: 1.2em;  
+                                 &.page-link-prev{
+                                      
+                                 }
+                             }
+                              
+                        }
+                        
+                    }
+                    span.ng2-smart-page-link{
+                        &.page-link{
+                            background-color: #332a86;
+                            color: white;
+                            display: inline-block;
+                            font-size: 1.2rem;
+                            padding: 0 10px;
+                            line-height: 30px;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

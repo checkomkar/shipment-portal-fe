@@ -106,6 +106,7 @@
     <Content Include="src\app\about\about.component.scss" />
     <Content Include="src\app\ang-datatables\ang-datatables.component.scss" />
     <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\data-tables-test\data-tables-test.component.html" />
     <Content Include="src\app\headers\headers.component.scss" />
     <Content Include="src\app\header\header.component.scss" />
     <Content Include="src\app\login\login.component.scss" />
@@ -273,6 +274,8 @@
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="src\app\page-not-found\page-not-found.component.scss" />
+    <Content Include="src\app\data-tables-test\data-tables-test.component.scss" />
+    <Content Include="src\styles\common\plugins\ng2-smart-table.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -340,6 +343,8 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\data-tables-test\data-tables-test.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\data-tables-test\data-tables-test.component.ts" />
     <TypeScriptCompile Include="src\app\directives\modal.directive.spec.ts" />
     <TypeScriptCompile Include="src\app\directives\modal.directive.ts" />
     <TypeScriptCompile Include="src\app\headers\headers.component.spec.ts" />

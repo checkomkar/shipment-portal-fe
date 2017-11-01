@@ -2,6 +2,7 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import './plugins/material-form';
 @import './plugins/animate.min';
+@import './plugins/ng2-smart-table.scss';
 *[hidden]{
 	display: none !important;
 }
@@ -42,7 +43,7 @@ body {
 }
 
 .main-section{
-	background-color: #EDF0F0;
+	background-color: white;
 }
 
 .btn-catalent{
@@ -50,7 +51,7 @@ body {
 	color: white;
 	&:hover{
 		color: white;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 	&.btn-catalent-light{
 		background-color: lighten( $catalent-main, 10% )
