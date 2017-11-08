@@ -11,6 +11,16 @@
         </div>
         <div class="login-fields-holder row" [formGroup]="loginGroup">
             <div class="input-field col s12 no-pad">
+                <mz-select-container>
+                    <select mz-select
+                            id="options-select"                            
+                            [placeholder]="'Domain'">
+                        <option value="1" class="left circle">CFusion</option>
+                        <option value="2" class="left circle">CPS</option>                      
+                    </select>
+                </mz-select-container>
+            </div>
+            <div class="input-field col s12 no-pad">
                 <input id="first_name" type="text" 
                        class="validate" 
                        

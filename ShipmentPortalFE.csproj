@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -106,7 +107,13 @@
     <Content Include="src\app\about\about.component.scss" />
     <Content Include="src\app\ang-datatables\ang-datatables.component.scss" />
     <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\create-form-botton\create-form-botton.component.html" />
+    <Content Include="src\app\create-form-botton\create-form-botton.component.spec.ts" />
+    <Content Include="src\app\create-form-botton\create-form-botton.component.ts" />
     <Content Include="src\app\data-tables-test\data-tables-test.component.html" />
+    <Content Include="src\app\footer\footer.component.html" />
+    <Content Include="src\app\footer\footer.component.spec.ts" />
+    <Content Include="src\app\footer\footer.component.ts" />
     <Content Include="src\app\headers\headers.component.scss" />
     <Content Include="src\app\header\header.component.scss" />
     <Content Include="src\app\login\login.component.scss" />
@@ -276,6 +283,8 @@
     <Content Include="src\app\page-not-found\page-not-found.component.scss" />
     <Content Include="src\app\data-tables-test\data-tables-test.component.scss" />
     <Content Include="src\styles\common\plugins\ng2-smart-table.scss" />
+    <Content Include="src\app\create-form-botton\create-form-botton.component.scss" />
+    <Content Include="src\app\footer\footer.component.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -425,7 +434,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
+  <Import Project="packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('packages\Microsoft.TypeScript.MSBuild.2.6.1\build\Microsoft.TypeScript.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

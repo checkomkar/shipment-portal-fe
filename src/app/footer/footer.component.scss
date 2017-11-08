@@ -1,0 +1,13 @@
+@import '../../styles/common/variables';
+footer{
+    background: $catalent-purple;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    color: white;
+    //margin-top: -50px;
+    &.pos-abs{
+        position: fixed;
+    }
+}

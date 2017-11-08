@@ -42,10 +42,11 @@ import { routing } from './app.routing';
 import { MaterializeModule } from 'ng2-materialize';
 import { DataTablesTestComponent } from './data-tables-test/data-tables-test.component';
 import { CreateFormBottonComponent } from './create-form-botton/create-form-botton.component';
+import { FooterComponent } from './footer/footer.component';
 
-let loginState = { name: 'home', url: '/',  component: LoginComponent }; 
-let headersState = { name: 'headers', url: '/',  component: ShipRequestHeaderComponent }; 
-let salesState = { name: 'sales', url: '/new-shipment-request',  component: SalesComponent }; 
+let loginState = { name: 'home', url: '/',  component: LoginComponent };
+let headersState = { name: 'headers', url: '/',  component: ShipRequestHeaderComponent };
+let salesState = { name: 'sales', url: '/new-shipment-request',  component: SalesComponent };
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',  component: ShipmentRequestComponent };
 let selectLotState = { name: 'select-lot', url: '/select-lot',  component: SelectLotComponent };
@@ -55,32 +56,32 @@ let newSiteState = { name: 'new-site', url: '/new-site',  component: NewSiteComp
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent },
-    { path: 'new-shipment-request', component: SalesComponent },    
+    { path: 'new-shipment-request', component: SalesComponent },
     //{
     //    path: '',
     //    redirectTo: '',
     //    pathMatch: 'full'
     //},
-    { path: 'about', component: AboutComponent }, 
-    { path: 'shipment-request', component: ShipmentRequestComponent }, 
-    { path: 'select-lot', component: SelectLotComponent }, 
-    { path: 'find-site', component: PortalFindSiteComponent }, 
-    { path: 'update-site', component: UpdateSiteComponent }, 
-    { path: 'new-site', component: NewSiteComponent }, 
+    { path: 'about', component: AboutComponent },
+    { path: 'shipment-request', component: ShipmentRequestComponent },
+    { path: 'select-lot', component: SelectLotComponent },
+    { path: 'find-site', component: PortalFindSiteComponent },
+    { path: 'update-site', component: UpdateSiteComponent },
+    { path: 'new-site', component: NewSiteComponent },
     //{ path: '**', component: PageNotFoundComponent }
 ];
-const routes = { 
-  states: [ 
-    findSiteState, 
-    updateSiteState, 
-    newSiteState, 
-    loginState, 
-    headersState, 
-    salesState, 
-    aboutState, 
-    shipmentRequestState, 
-    selectLotState ], 
-  useHash: false 
+const routes = {
+  states: [
+    findSiteState,
+    updateSiteState,
+    newSiteState,
+    loginState,
+    headersState,
+    salesState,
+    aboutState,
+    shipmentRequestState,
+    selectLotState ],
+  useHash: false
 };
 
 @NgModule({
@@ -107,6 +108,7 @@ const routes = {
     PageNotFoundComponent,
     DataTablesTestComponent,
     CreateFormBottonComponent,
+    FooterComponent,
     //ModalDirective
     ],
   entryComponents: [CreateFormBottonComponent],
@@ -129,10 +131,10 @@ const routes = {
     //UIRouterModule.forRoot(routes),
     MDBBootstrapModule.forRoot(),
     routing,
-    /*RouterModule.forRoot(
+    RouterModule.forRoot(
         appRoutes,
-        { enableTracing: true } // <-- debugging purposes only
-    )*/
+        //{ enableTracing: true } // <-- debugging purposes only
+    )
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],

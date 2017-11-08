@@ -1,7 +1,7 @@
 @import '../../styles/common/variables';
 
 .nav-custom{
-	background: $catalent-main;
+	background: $catalent-purple;
 	color: white;
 	a{
 		color: white;
@@ -9,9 +9,9 @@
 	//border-bottom: 1px solid #ddd;
 }
 .navbar-header{
-	a.navbar-brand{		
+	a.navbar-brand{
 		img{
 			width: 10%;
-		}		
+		}
 	}
 }

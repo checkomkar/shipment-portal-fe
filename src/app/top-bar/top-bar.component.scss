@@ -1,3 +1,4 @@
+@import '../../styles/common/variables';
 nav.top-bar-nav{
 	position: fixed;
 	top: 0;
@@ -18,7 +19,13 @@ nav.top-bar-nav{
 }
 
 nav{
-	background-color: #0F6BAD;
+	background-color: $catalent-purple;
+  .brand-logo{
+    img{
+      width: 25%;
+      margin-top: 10px;
+    }
+  }
 }
 
 .show-nav{
@@ -34,12 +41,12 @@ nav{
 	}
 }
 .stylish-input-group .input-group-addon{
-    background: #EFF2F2 !important; 
+    background: #EFF2F2 !important;
     border-color: #EFF2F2;
 }
 .stylish-input-group .form-control{
-	border-right:0; 
-	box-shadow:0 0 0; 
+	border-right:0;
+	box-shadow:0 0 0;
 	border-color:#EFF2F2;
 	border-radius: 15px 0 0px 15px;
 	background-color: #EFF2F2;

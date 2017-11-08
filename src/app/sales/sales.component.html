@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col s12 content-area">
             <h5>7.5.2.SP-2: Shipment Portal List Screen</h5>
-            
+
             <button class="btn btn-primary" uiSref="shipment-request">New Shipping Request</button>
-            
-            <!--<div class="form-group">        
+
+            <!--<div class="form-group">
                 <input type="text" class="form-control" #term placeholder="Search Table" (keyup)="0">
                 <input type="text" name="name" value="" [(ngModel)]="name" />
                 {{name}}
@@ -24,7 +24,7 @@
                         </th>
                         <th>
                             Protocol
-                        </th>                
+                        </th>
                         <th>
                             Site Number
                         </th>
@@ -41,7 +41,7 @@
                             Status
                         </th>
                         <th>
-                            
+
                         </th>
                     </tr>
                 </thead>
@@ -73,7 +73,7 @@
                         </td>
                         <td>
                             {{item.status}}
-                        </td>                
+                        </td>
                         <td>
                             <button class="btn btn-default" (click)="openModal('custom-modal-1')">
                                 Create New Form
@@ -83,7 +83,7 @@
                 </tbody>
             </table>-->
             <!-- <app-ang-datatables></app-ang-datatables>   -->
-            
+
         </div>
     </div>
 </div>
@@ -116,5 +116,5 @@
 </ng-template>
 
 <ng-template #newShipReq>
-    <app-new-ship-request [modalRefChild]='modalRef'></app-new-ship-request>    
+    <app-new-ship-request [modalRefChild]='modalRef'></app-new-ship-request>
 </ng-template>
